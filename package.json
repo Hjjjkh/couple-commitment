@@ -10,7 +10,7 @@
     "dev": "npm run dev --workspace=frontend",
     "build": "npm run build --workspace=frontend",
     "preview": "wrangler pages dev frontend/dist",
-    "deploy": "exit 0"
+    "deploy": "node -e 'console.log(\"Deployed\")'"
   },
   "devDependencies": {
     "wrangler": "^3.114.17"

@@ -1,20 +1,11 @@
 name = "couple-commitment"
 compatibility_date = "2024-01-01"
 
-# Pages build output directory
-pages_build_output_dir = "./frontend/dist"
+# Pages 会自动部署这个目录
+pages_build_output_dir = "frontend/dist"
 
 # Environment Variables
 [vars]
 JWT_SECRET = "default-secret-change-in-dashboard"
 
-# ============================================
-# 以下绑定配置已在 Deploy Button 中设置
-# 不需要在 wrangler.toml 中重复定义
-#
-# D1 Database: DB → couple-commitment-db
-# KV Namespace: SESSION_STORE → couple-commitment
-# R2 Bucket: PHOTOS → couple-photos
-#
-# 这些绑定由 Cloudflare 自动注入，不要在配置文件中定义
-# ============================================
+# D1/KV/R2 绑定由 Deploy Button 注入，不需要在这里定义
