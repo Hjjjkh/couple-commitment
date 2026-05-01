@@ -4,20 +4,17 @@ compatibility_date = "2024-01-01"
 # Pages build output directory
 pages_build_output_dir = "./frontend/dist"
 
-# D1 Database - 存储用户、约定、打卡、会议数据
-[[d1_databases]]
-binding = "DB"
-database_name = "couple-commitment-db"
-
-# KV Namespace - 存储登录会话
-[[kv_namespaces]]
-binding = "SESSION_STORE"
-
-# R2 Bucket - 存储照片
-[[r2_buckets]]
-binding = "PHOTOS"
-bucket_name = "couple-photos"
-
 # Environment Variables
 [vars]
 JWT_SECRET = "default-secret-change-in-dashboard"
+
+# ============================================
+# 以下绑定配置已在 Deploy Button 中设置
+# 不需要在 wrangler.toml 中重复定义
+#
+# D1 Database: DB → couple-commitment-db
+# KV Namespace: SESSION_STORE → couple-commitment
+# R2 Bucket: PHOTOS → couple-photos
+#
+# 这些绑定由 Cloudflare 自动注入，不要在配置文件中定义
+# ============================================
