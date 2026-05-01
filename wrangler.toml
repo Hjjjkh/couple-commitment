@@ -8,12 +8,10 @@ pages_build_output_dir = "./frontend/dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "couple-commitment-db"
-database_id = ""
 
 # KV Namespace - 存储登录会话
 [[kv_namespaces]]
 binding = "SESSION_STORE"
-id = ""
 
 # R2 Bucket - 存储照片
 [[r2_buckets]]
